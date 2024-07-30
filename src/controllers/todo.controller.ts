@@ -79,6 +79,7 @@ export const deleteTodo = async (req: AuthRequest, res: Response) => {
         return res.status(200).json({
             success: true,
             message: 'Deleted Successfully',
+            data: deletedTodo,
         });
     } catch (error) {
         return res.status(500).json({

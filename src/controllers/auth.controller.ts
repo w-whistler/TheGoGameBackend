@@ -10,7 +10,7 @@ export const login = async (req: Request, res: Response) => {
         if (!data) {
             return res.status(401).json({ success: false, message: 'Invalid credentials' });
         } else {
-            return res.status(200).json({ success: true, data: { token: data }});
+            return res.status(200).json({ success: true, data });
         }
     } catch (error) {
         return res.status(401).json({ success: false, message: 'Invalid credentials' });
